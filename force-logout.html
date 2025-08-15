@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logout do GhostWallet</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>Executando logout...</h1>
+    <p>O usuário será deslogado automaticamente.</p>
+    
+    <script>
+        // Script para fazer logout imediato
+        console.log('Fazendo logout do usuário atual...');
+        
+        // Limpar todos os dados do localStorage
+        const keysToRemove = [
+            'ghost-wallet-user',
+            'ghost-wallet-session', 
+            'ghost-wallet-profile',
+            'ghost-wallet-license-status',
+            'ghost-wallet-blockchain-access',
+            'supabase.auth.token',
+            'sb-supabase-auth-token',
+            'utmify_data',
+            'ghost-wallet-onboarding'
+        ];
+        
+        keysToRemove.forEach(key => {
+            localStorage.removeItem(key);
+            console.log(`Removido: ${key}`);
+        });
+        
+        // Limpar sessionStorage
+        sessionStorage.clear();
+        console.log('SessionStorage limpo');
+        
+        // Redirecionar para a aplicação principal onde será detectado que não há usuário logado
+        setTimeout(() => {
+            console.log('Redirecionando para aplicação...');
+            window.location.href = '/';
+        }, 1000);
+    </script>
+</body>
+</html>

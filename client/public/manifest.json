@@ -1,0 +1,16 @@
+{
+  "name": "Ghost Wallet",
+  "short_name": "Ghost",
+  "description": "Minerador de criptomoedas simplificado",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icons/ghost-logo.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}

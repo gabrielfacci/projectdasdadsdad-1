@@ -1,0 +1,137 @@
+-- Drop existing policies
+DROP POLICY IF EXISTS "Allow upsert licenses" ON licenses;
+DROP POLICY IF EXISTS "Allow update licenses" ON licenses;
+DROP POLICY IF EXISTS "Allow select licenses" ON licenses;
+
+-- Create new RLS policies for licenses table
+CREATE POLICY "Allow select licenses" 
+  ON licenses FOR SELECT 
+  TO authenticated 
+  USING (true);
+
+CREATE POLICY "Allow insert licenses" 
+  ON licenses FOR INSERT 
+  TO authenticated 
+  WITH CHECK (true);
+
+CREATE POLICY "Allow update licenses" 
+  ON licenses FOR UPDATE 
+  TO authenticated 
+  USING (true);
+
+-- Drop existing functions to avoid conflicts
+DROP FUNCTION IF EXISTS validate_all_licenses_rpc(text);
+DROP FUNCTION IF EXISTS update_user_license_status_v4(uuid, boolean);
+
+-- Create validate_all_licenses_rpc with fixed column reference
+CREATE OR REPLACE FUNCTION validate_all_licenses_rpc(
+  p_email text
+)
+RETURNS jsonb
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+  v_user_id uuid;
+  v_licenses jsonb;
+BEGIN
+  -- Validate parameter
+  IF p_email IS NULL OR p_email = '' THEN
+    RETURN jsonb_build_object(
+      'error', 'Email is required',
+      'success', false
+    );
+  END IF;
+
+  -- Get user ID
+  SELECT id INTO v_user_id
+  FROM users
+  WHERE email = p_email;
+
+  IF v_user_id IS NULL THEN
+    RETURN jsonb_build_object(
+      'error', 'User not found',
+      'success', false
+    );
+  END IF;
+
+  -- Get licenses using product_code instead of product_id
+  SELECT jsonb_agg(
+    jsonb_build_object(
+      'product_code', l.product_code,
+      'status', l.license_status
+    )
+  ) INTO v_licenses
+  FROM licenses l
+  WHERE l.user_id = v_user_id;
+
+  RETURN jsonb_build_object(
+    'licenses', COALESCE(v_licenses, '[]'::jsonb),
+    'success', true
+  );
+END;
+$$;
+
+-- Create update_user_license_status_rpc with unambiguous parameters
+CREATE OR REPLACE FUNCTION update_user_license_status_rpc(
+  p_user_id uuid,
+  p_has_license boolean
+)
+RETURNS jsonb
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+  v_result jsonb;
+  v_user_exists boolean;
+BEGIN
+  -- Validate parameters
+  IF p_user_id IS NULL OR p_user_id = '00000000-0000-0000-0000-000000000000' THEN
+    RETURN jsonb_build_object(
+      'error', 'Invalid user ID',
+      'success', false
+    );
+  END IF;
+
+  -- Check if user exists
+  SELECT EXISTS (
+    SELECT 1 FROM users WHERE id = p_user_id
+  ) INTO v_user_exists;
+
+  IF NOT v_user_exists THEN
+    RETURN jsonb_build_object(
+      'error', 'User not found',
+      'success', false
+    );
+  END IF;
+
+  -- Update user's license status
+  WITH updated AS (
+    UPDATE users
+    SET 
+      has_active_license = COALESCE(p_has_license, false),
+      last_license_check = now(),
+      updated_at = now()
+    WHERE id = p_user_id
+    RETURNING id, has_active_license, last_license_check
+  )
+  SELECT jsonb_build_object(
+    'id', updated.id,
+    'has_active_license', updated.has_active_license,
+    'last_license_check', updated.last_license_check,
+    'success', true
+  ) INTO v_result
+  FROM updated;
+
+  RETURN v_result;
+END;
+$$;
+
+-- Grant execute permissions
+REVOKE ALL ON FUNCTION validate_all_licenses_rpc(text) FROM PUBLIC;
+REVOKE ALL ON FUNCTION update_user_license_status_rpc(uuid, boolean) FROM PUBLIC;
+
+GRANT EXECUTE ON FUNCTION validate_all_licenses_rpc(text) TO anon, authenticated;
+GRANT EXECUTE ON FUNCTION update_user_license_status_rpc(uuid, boolean) TO anon, authenticated;

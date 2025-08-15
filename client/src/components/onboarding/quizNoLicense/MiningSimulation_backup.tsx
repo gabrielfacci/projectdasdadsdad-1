@@ -1,0 +1,1 @@
+// Backup do arquivo original antes da remoção das animações

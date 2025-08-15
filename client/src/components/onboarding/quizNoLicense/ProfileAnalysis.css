@@ -1,0 +1,73 @@
+
+/* Estilos específicos para ProfileAnalysis */
+
+/* Ajustes para telas móveis */
+@media (max-width: 480px) {
+  .profile-analysis-container {
+    height: 100%;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    justify-content: space-between;
+  }
+  
+  .feature-cards {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-content {
+    flex: 1;
+    min-width: 0; /* Importante para evitar overflow */
+    max-width: calc(100% - 3rem); /* Dar espaço para o ícone */
+  }
+  
+  .feature-content h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .feature-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 2.4em;
+  }
+  
+  .action-button {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 360px) {
+  .profile-analysis-container {
+    padding: 0.25rem !important;
+  }
+  
+  .feature-cards {
+    gap: 0.375rem !important;
+  }
+  
+  .feature-icon {
+    padding: 0.375rem !important;
+    margin-right: 0.5rem !important;
+  }
+  
+  .feature-content h3 {
+    font-size: 0.7rem !important;
+  }
+  
+  .feature-content p {
+    font-size: 0.65rem !important;
+    line-height: 1.1;
+  }
+}
+
+/* Ajustes para telas altas */
+@media (min-height: 700px) {
+  .profile-analysis-container {
+    justify-content: center;
+  }
+}

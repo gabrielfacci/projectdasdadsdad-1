@@ -1,0 +1,79 @@
+Implementar a opção de seleção de idioma (com bandeiras) nas telas de cadastro e configurações do usuário, suportando os seguintes idiomas:
+
+🇧🇷 Português (BR)
+
+🇺🇸 Inglês (EN-US)
+
+🇪🇸 Espanhol (ES-ES)
+
+✅ REQUISITOS TÉCNICOS
+📌 Localização do seletor:
+
+Página de cadastro: Adicionar seletor de idioma visual com bandeiras no formulário.
+
+Página de configurações do usuário: Exibir seletor de idioma para alteração posterior.
+
+📊 Armazenamento no Supabase:
+
+Criar uma nova coluna language na tabela users (tipo: text, valores esperados: "pt-BR", "en-US", "es-ES").
+
+No cadastro, salvar o valor selecionado pelo usuário.
+
+Na alteração nas configurações, atualizar esse valor com persistência.
+
+🌐 Lógica de internacionalização (i18n):
+
+Implementar ou integrar sistema de tradução baseado em arquivos JSON ou estruturas já existentes (ex: react-i18next, next-i18next, ou sistema interno).
+
+O idioma selecionado deve refletir automaticamente em toda a interface da aplicação, sem necessidade de recarregar página.
+
+Ao logar, o sistema deve detectar o idioma salvo no usuário e aplicar automaticamente.
+
+🧩 Integração segura com a aplicação existente:
+
+A lógica de tradução deve ser injetada sem quebrar nenhuma página, modal ou componente atual.
+
+Deve funcionar em conjunto com os contextos ou providers atuais da aplicação.
+
+Não alterar nenhuma lógica de fluxo existente (onboarding, login, pitch de venda, etc).
+
+🔍 Varredura completa dos textos do frontend:
+
+A IA deve varrer 100% de todos os textos atualmente em português no frontend:
+
+Todas as páginas
+
+Todos os modais
+
+Todos os componentes
+
+Todos os toasts, tooltips, mensagens de erro, placeholders, labels e botões
+
+Cada string deve ser convertida para:
+
+Inglês nativo (não Google Translate, linguagem real e contextual)
+
+Espanhol nativo com fluência natural
+
+💡 EXEMPLO DE IMPLEMENTAÇÃO
+tsx
+Copiar
+Editar
+// No cadastro:
+<SelectLanguage
+  options={[
+    { label: "Português", value: "pt-BR", icon: BrazilFlag },
+    { label: "English", value: "en-US", icon: USFlag },
+    { label: "Español", value: "es-ES", icon: SpainFlag },
+  ]}
+  onChange={(lang) => setSelectedLanguage(lang)}
+/>
+
+// Salvar no Supabase:
+await supabase.from("users").update({ language: selectedLanguage }).eq("id", user.id);
+
+// No carregamento da app:
+i18n.changeLanguage(user.language || "pt-BR");
+🔒 PRIORIDADE ABSOLUTA:
+NÃO prejudicar nenhuma funcionalidade atual da aplicação. Toda a lógica de internacionalização deve ser desacoplada, segura e validada por fallback padrão (pt-BR).
+

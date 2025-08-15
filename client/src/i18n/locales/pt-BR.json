@@ -1,0 +1,567 @@
+{
+  "common": {
+    "welcome": "Bem-vindo ao Ghost Wallet!",
+    "hello": "Olá",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "continue": "Continuar",
+    "next": "Próximo",
+    "back": "Voltar",
+    "close": "Fechar",
+    "confirm": "Confirmar",
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "warning": "Aviso",
+    "info": "Informação",
+    "yes": "Sim",
+    "no": "Não",
+    "ok": "OK",
+    "retry": "Tentar novamente",
+    "select": "Selecionar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "apply": "Aplicar",
+    "reset": "Resetar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "view": "Visualizar",
+    "download": "Baixar",
+    "upload": "Enviar",
+    "copy": "Copiar",
+    "paste": "Colar",
+    "cut": "Recortar"
+  },
+  "auth": {
+    "login": "Entrar",
+    "register": "Cadastrar",
+    "logout": "Sair",
+    "email": "E-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirmar senha",
+    "forgotPassword": "Esqueci minha senha",
+    "rememberMe": "Lembrar de mim",
+    "loginTitle": "Faça login em sua conta",
+    "registerTitle": "Crie sua conta",
+    "loginSubtitle": "Entre para acessar sua carteira Ghost",
+    "registerSubtitle": "Junte-se à comunidade Ghost Wallet",
+    "emailPlaceholder": "Digite seu e-mail",
+    "passwordPlaceholder": "Digite sua senha",
+    "confirmPasswordPlaceholder": "Confirme sua senha",
+    "invalidEmail": "E-mail inválido",
+    "passwordTooShort": "Senha deve ter pelo menos 6 caracteres",
+    "passwordsDontMatch": "Senhas não coincidem",
+    "loginError": "Erro ao fazer login",
+    "registerError": "Erro ao criar conta",
+    "loginSuccess": "Login realizado com sucesso",
+    "registerSuccess": "Conta criada com sucesso",
+    "alreadyHaveAccount": "Já tem uma conta?",
+    "dontHaveAccount": "Não tem uma conta?",
+    "createAccount": "Criar conta",
+    "signIn": "Entrar",
+    "language": "Idioma",
+    "selectLanguage": "Selecionar idioma",
+    "name": "Nome",
+    "namePlaceholder": "Digite seu nome completo...",
+    "agreeTerms": "Ao continuar, você concorda com nossos termos",
+    "backToLogin": "Voltar para login"
+  },
+  "settings": {
+    "title": "Configurações",
+    "subtitle": "Configurações do usuário",  
+    "userProfile": "Perfil do Usuário",
+    "language": "Idioma",
+    "selectLanguage": "Selecione seu idioma preferido"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "mining": "Mineração", 
+    "blockchain": "Blockchain",
+    "settings": "Configurações",
+    "referrals": "Indicações",
+    "profile": "Perfil",
+    "wallet": "Carteira",
+    "history": "Histórico",
+    "notifications": "Notificações",
+    "help": "Ajuda",
+    "support": "Suporte"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Bem-vindo",
+    "estimatedBalance": "Saldo Estimado",
+    "hashRate": "Taxa de Hash",
+    "attempts": "Tentativas",
+    "foundWallets": "Carteiras Encontradas",
+    "successRate": "Taxa de Sucesso",
+    "dailyEarnings": "Ganhos Diários",
+    "totalEarnings": "Ganhos Totais",
+    "activeMiners": "Mineradores Ativos",
+    "networkStatus": "Status da Rede",
+    "lastUpdate": "Última Atualização"
+  },
+  "mining": {
+    "title": "Mineração",
+    "start": "Iniciar Mineração",
+    "stop": "Parar Mineração",
+    "pause": "Pausar",
+    "resume": "Retomar",
+    "status": "Status",
+    "running": "Executando",
+    "stopped": "Parado",
+    "paused": "Pausado",
+    "hashRate": "Taxa de Hash",
+    "attempts": "Tentativas",
+    "foundWallets": "Carteiras Encontradas",
+    "balance": "Saldo",
+    "blockchain": "Blockchain",
+    "selectBlockchain": "Selecionar Blockchain",
+    "turboMode": "Modo Turbo",
+    "normalMode": "Modo Normal",
+    "logs": "Logs",
+    "performance": "Desempenho",
+    "statistics": "Estatísticas",
+    "walletFound": "Carteira encontrada!",
+    "noWalletsFound": "Nenhuma carteira encontrada ainda",
+    "miningInProgress": "Mineração em andamento...",
+    "preparingMining": "Preparando mineração...",
+    "connectingToNetwork": "Conectando à rede...",
+    "analyzing": "Analisando blockchain...",
+    "searching": "Procurando carteiras...",
+    "validating": "Validando resultados..."
+  },
+  "blockchain": {
+    "title": "Seleção de Blockchain",
+    "selectBlockchain": "Selecione uma blockchain para começar",
+    "available": "Disponível",
+    "locked": "Bloqueado", 
+    "unlockWithLicense": "Desbloqueie com licença",
+    "solana": "Solana",
+    "bitcoin": "Bitcoin",
+    "ethereum": "Ethereum",
+    "bsc": "BSC",
+    "cardano": "Cardano",
+    "polkadot": "Polkadot",
+    "trending": "Blockchain em Alta 🔥",
+    "trendingSubtitle": "Maior retorno nas últimas 24h",
+    "growth": "Crescimento",
+    "potential": "Potencial diário",
+    "walletsFound": "carteiras encontradas recentes",
+    "unlockNow": "Desbloqueie agora",
+    "accessRequired": "Acesso requer licença ativa",
+    "temporarilyUnavailable": "Temporariamente indisponível"
+  },
+  "settings": {
+    "title": "Configurações",
+    "profile": "Perfil",
+    "account": "Conta",
+    "preferences": "Preferências",
+    "security": "Segurança",
+    "notifications": "Notificações",
+    "language": "Idioma",
+    "theme": "Tema",
+    "currency": "Moeda",
+    "timezone": "Fuso Horário",
+    "emailNotifications": "Notificações por E-mail",
+    "pushNotifications": "Notificações Push",
+    "smsNotifications": "Notificações SMS",
+    "darkMode": "Modo Escuro",
+    "lightMode": "Modo Claro",
+    "autoMode": "Automático",
+    "saveChanges": "Salvar Alterações",
+    "discardChanges": "Descartar Alterações",
+    "changesSaved": "Alterações salvas com sucesso",
+    "changesDiscarded": "Alterações descartadas"
+  },
+  "referrals": {
+    "title": "Programa de Indicações",
+    "yourCode": "Seu Código",
+    "shareCode": "Compartilhar Código",
+    "earnings": "Ganhos por Indicação",
+    "totalReferrals": "Total de Indicações",
+    "activeReferrals": "Indicações Ativas",
+    "commission": "Comissão",
+    "withdraw": "Sacar",
+    "minimumWithdrawal": "Saque Mínimo",
+    "referralLink": "Link de Indicação",
+    "copyLink": "Copiar Link",
+    "linkCopied": "Link copiado!",
+    "inviteFriends": "Convide Amigos",
+    "earnCommission": "Ganhe comissão de 10% para cada amigo que se cadastrar"
+  },
+  "onboarding": {
+    "welcome": "Bem-vindo ao Ghost Wallet",
+    "subtitle": "Descubra carteiras perdidas na blockchain",
+    "getStarted": "Começar",
+    "skip": "Pular",
+    "step1Title": "Configuração Inicial",
+    "step1Description": "Vamos configurar sua experiência de mineração",
+    "step2Title": "Seleção de Blockchain",
+    "step2Description": "Escolha a blockchain para começar a minerar",
+    "step3Title": "Primeiro Resultado",
+    "step3Description": "Veja seus primeiros resultados de mineração",
+    "profileAnalysis": "Análise de Perfil",
+    "algorithmAdaptive": "Algoritmo adaptativo",
+    "algorithmDescription": "Ajusta a mineração conforme seu comportamento",
+    "intelligentOptimization": "Otimização inteligente",
+    "optimizationDescription": "Maior taxa de sucesso com IA em tempo real",
+    "totalEncryption": "Criptografia total",
+    "encryptionDescription": "100% seguro. Nenhum dado sensível é pedido",
+    "personalizedResults": "Resultados personalizados",
+    "resultsDescription": "Mineração moldada pro seu perfil de risco"
+  },
+  "license": {
+    "title": "Licença Requerida",
+    "subtitle": "Desbloqueie todo o potencial do Ghost Wallet",
+    "active": "Ativa",
+    "inactive": "Inativa", 
+    "expired": "Expirada",
+    "verify": "Verificar",
+    "verifying": "Verificando...",
+    "lastVerification": "Última verificação",
+    "authorizedBlockchains": "Blockchains Autorizadas",
+    "upgradeNow": "Fazer Upgrade Agora",
+    "choosePlan": "Escolher Plano",
+    "basicPlan": "Plano Básico",
+    "premiumPlan": "Plano Premium",
+    "enterprisePlan": "Plano Enterprise",
+    "unlockAccess": "Desbloquear Acesso",
+    "fullAccess": "Acesso Completo"
+  },
+  "plans": {
+    "title": "Escolha seu Plano",
+    "subtitle": "Desbloqueie o potencial completo da mineração",
+    "basic": "Básico",
+    "premium": "Premium", 
+    "enterprise": "Enterprise",
+    "mostPopular": "Mais Popular",
+    "recommended": "Recomendado",
+    "perMonth": "por mês",
+    "selectPlan": "Selecionar Plano",
+    "currentPlan": "Plano Atual",
+    "upgrade": "Fazer Upgrade",
+    "downgrade": "Fazer Downgrade",
+    "features": "Recursos",
+    "unlimitedMining": "Mineração Ilimitada",
+    "prioritySupport": "Suporte Prioritário",
+    "advancedAnalytics": "Análises Avançadas",
+    "multiBlockchain": "Multi-Blockchain",
+    "turboMode": "Modo Turbo",
+    "customAlgorithms": "Algoritmos Personalizados"
+  },
+  "errors": {
+    "general": "Ocorreu um erro inesperado",
+    "network": "Erro de conexão",
+    "timeout": "Tempo limite esgotado",
+    "unauthorized": "Não autorizado",
+    "forbidden": "Acesso negado",
+    "notFound": "Não encontrado",
+    "serverError": "Erro interno do servidor",
+    "validationError": "Erro de validação",
+    "required": "Este campo é obrigatório",
+    "invalidFormat": "Formato inválido",
+    "tooShort": "Muito curto",
+    "tooLong": "Muito longo",
+    "noInternetConnection": "Sem conexão com a internet",
+    "tryAgain": "Tente novamente"
+  },
+  "notifications": {
+    "walletFound": "Nova carteira encontrada!",
+    "miningStarted": "Mineração iniciada",
+    "miningStopped": "Mineração parada",
+    "balanceUpdated": "Saldo atualizado",
+    "licenseVerified": "Licença verificada",
+    "licenseExpired": "Licença expirada",
+    "withdrawalProcessed": "Saque processado",
+    "referralBonus": "Bônus de indicação recebido",
+    "systemMaintenance": "Manutenção do sistema",
+    "newFeature": "Nova funcionalidade disponível"
+  },
+  "welcome": {
+    "back": "Bem-vindo de volta",
+    "backWithName": "Bem-vindo de volta, {{name}}!",
+    "blockchain": "Blockchain selecionada",
+    "getStarted": "Começar",
+    "ready": "Tudo pronto!"
+  },
+  "blockchainSelector": {
+    "accessRequires": "Acesso à blockchain {{name}} requer licença ativa. Clique em \"Verificar\" para atualizar suas licenças.",
+    "temporarilyUnavailable": "Blockchain {{name}} temporariamente indisponível. Tente novamente em alguns instantes.",
+    "waitVerification": "Aguarde a verificação de licenças ser concluída antes de selecionar uma blockchain."
+  },
+  "miningExtras": {
+    "withdraw": "Saque",
+    "turboActive": "Turbo Ativado",
+    "activateTurbo": "Ativar Turbo",
+    "activateTurboTitle": "Ative o Modo Turbo!",
+    "activateTurboDescription": "Clique no botão \"Ativar Turbo\" para aumentar a velocidade de mineração em até 10x!",
+    "continueJourney": "Continue sua jornada na mineração",
+    "totalAttempts": "Total de Tentativas"
+  },
+  "onboarding": {
+    "profileAnalysis": {
+      "title": "Análise de Perfil de Investidor", 
+      "subtitle": "Antes de iniciar a mineração, vamos montar o ambiente ideal de mineração com base no seu perfil.",
+      "protocolInfo": "Todos os dados seguem protocolo Ghost Chain™ com sandbox de teste anônimo.",
+      "analyzing": "Analisando seu perfil",
+      "startButton": "Iniciar Minha Análise",
+      "features": {
+        "adaptive": "Algoritmo adaptativo",
+        "adaptiveDesc": "Ajusta a mineração conforme seu comportamento",
+        "optimization": "Otimização inteligente", 
+        "optimizationDesc": "Maior taxa de sucesso com IA em tempo real",
+        "encryption": "Criptografia total",
+        "encryptionDesc": "100% seguro. Nenhum dado sensível é pedido",
+        "personalized": "Resultados personalizados",
+        "personalizedDesc": "Mineração moldada pro seu perfil de risco"
+      }
+    },
+    "nameEntry": {
+      "profileLoaded": "Perfil carregado com sucesso!",
+      "loadingProfile": "Carregando seu perfil...",
+      "customizeExperience": "Vamos começar a personalizar sua experiência.",
+      "preparingEnvironment": "Preparando o ambiente para sua jornada de mineração...",
+      "proceedingAnalysis": "Prosseguindo com a análise de perfil..."
+    },
+    "ghostTest": {
+      "title": "Análise Avançada do Perfil",
+      "analysisTitle": "Análise de Perfil",
+      "processing": "Análise executada com processamento neural e criptografia de ponta a ponta",
+      "completed": "Análise concluída. Redirecionando para os resultados...",
+      "phases": [
+        "Iniciando análise de perfil",
+        "Processando preferências de investimento", 
+        "Calculando padrões de comportamento",
+        "Verificando compatibilidade",
+        "Analisando algoritmos Ghost AI™",
+        "Processando dados de resposta"
+      ]
+    },
+    "cryptoLevel": {
+      "title": "Qual é o seu nível de conhecimento em criptomoedas?",
+      "subtitle": "Isso nos ajudará a personalizar seu perfil de mineração",
+      "selectOption": "Selecione uma opção para continuar",
+      "beginner": {
+        "title": "Iniciante",
+        "description": "Estou começando agora no mundo das criptomoedas"
+      },
+      "intermediate": {
+        "title": "Intermediário", 
+        "description": "Já investi em criptomoedas e entendo os conceitos básicos"
+      },
+      "advanced": {
+        "title": "Avançado",
+        "description": "Tenho bastante experiência e conhecimento no mercado"
+      }
+    },
+    "returnPreference": {
+      "title": "Qual é a sua preferência de retorno?",
+      "subtitle": "Escolha a forma de lucro que mais se alinha com seus objetivos. Isso define os filtros iniciais da varredura.",
+      "highRisk": {
+        "title": "Ganhos rápidos com maior risco",
+        "description": "Prioriza tokens com maior volatilidade e potencial de retorno"
+      },
+      "balanced": {
+        "title": "Equilíbrio entre risco e retorno",
+        "description": "Estratégia balanceada com diversificação adequada"
+      },
+      "lowRisk": {
+        "title": "Lucros consistentes e seguros",
+        "description": "Foca em moedas estáveis e projetos consolidados"
+      },
+      "selectOption": "Selecione uma opção para continuar"
+    },
+    "walletExperience": {
+      "title": "Você já utilizou carteiras digitais antes?",
+      "subtitle": "Sua experiência atual ajuda a personalizar as explicações e recursos disponíveis.",
+      "experienced": {
+        "title": "Sim, utilizo com frequência",
+        "description": "Faço transações e acompanho ativos com certa autonomia"
+      },
+      "beginner": {
+        "title": "Já criei uma wallet, mas quase não uso",
+        "description": "Dei os primeiros passos, mas ainda estou aprendendo"
+      },
+      "newcomer": {
+        "title": "Ainda não, mas quero aprender",
+        "description": "Estou começando agora nesse mundo"
+      },
+      "selectOption": "Selecione uma opção para continuar"
+    },
+    "miningExperience": {
+      "title": "Você já utilizou ferramentas de mineração antes?",
+      "subtitle": "Queremos entender se você já experimentou algo parecido.",
+      "newcomer": {
+        "title": "Nunca, é a primeira vez que vejo algo assim",
+        "description": "Estou curioso(a) e aberto(a) para entender como funciona"
+      },
+      "aware": {
+        "title": "Já ouvi falar, mas nunca testei",
+        "description": "Tenho noção básica, mas nunca explorei de fato"
+      },
+      "experienced": {
+        "title": "Sim, mas nenhuma com inteligência artificial em tempo real",
+        "description": "Já experimentei soluções, mas busco algo mais avançado"
+      },
+      "selectOption": "Selecione uma opção para continuar"
+    },
+    "opportunityApproach": {
+      "title": "Como você lida com oportunidades fora do comum?",
+      "subtitle": "Entender seu perfil de risco nos ajuda a configurar alertas e filtros adequados.",
+      "quickAction": {
+        "title": "Analiso rápido e ajo se fizer sentido",
+        "description": "Gosto de agir antes da maioria quando vejo potencial"
+      },
+      "cautious": {
+        "title": "Preciso entender bem antes de decidir",
+        "description": "Prefiro segurança e clareza antes de qualquer passo"
+      },
+      "trustBased": {
+        "title": "Depende de quem está recomendando",
+        "description": "Confio mais quando vem de uma fonte confiável"
+      },
+      "selectOption": "Selecione uma opção para continuar"
+    },
+    "profileApproval": {
+      "title": "Aprovamos seu perfil para mineração!",
+      "subtitle": "Com base nas suas respostas, configuramos um ambiente personalizado.",
+      "continueButton": "Continuar para Mineração",
+      "autoRedirect": "Redirecionamento automático em {seconds}s",
+      "specs": {
+        "scan": "Varredura nas blockchains: Solana | Ethereum | BNB | Polygon",
+        "ai": "Inteligência artificial em tempo real para otimização",
+        "security": "Protocolo de segurança multicamada ativo",
+        "performance": "Análise de performance e alertas automáticos",
+        "algorithm": "Algoritmos adaptativos baseados no seu perfil",
+        "data": "Base de dados em tempo real das principais exchanges"
+      },
+      "stats": {
+        "techInterest": "Interesse tecnológico",
+        "cryptoLevel": "Nível cripto",
+        "riskOpenness": "Abertura ao risco",
+        "miningPotential": "Potencial de mineração"
+      },
+      "techSpecs": {
+        "ghostCore": "Ghost Core™ V3.1",
+        "security": "Segurança SHA-512 com sandbox",
+        "wallets": "37.820 carteiras analisadas em tempo real"
+      }
+    },
+    "cryptoInterest": {
+      "title": "O que mais desperta seu interesse em criptomoedas?",
+      "subtitle": "Isso nos ajuda a priorizar os tipos de ativos na sua varredura.",
+      "privacy": {
+        "title": "Privacidade e anonimato",
+        "description": "Prioriza tokens focados em anonimato e transações privadas"
+      },
+      "financialFreedom": {
+        "title": "Liberdade financeira",
+        "description": "Foco em ativos com potencial de valorização a longo prazo"
+      },
+      "balanced": {
+        "title": "Equilíbrio entre risco e retorno",
+        "description": "Estratégia balanceada para crescimento sustentável"
+      },
+      "selectOption": "Selecione uma opção para continuar"
+    },
+    "ghostTest": {
+      "title": "Análise Avançada do Perfil",
+      "subtitle": "Aguarde... Criando o seu perfil com base na tecnologia Ghost Chain™",
+      "phases": [
+        "Iniciando análise...",
+        "Processando dados...",
+        "Calculando padrões...",
+        "Verificando compatibilidade...",
+        "Analisando algoritmos...",
+        "Processando respostas...",
+        "Identificando perfil psicométrico",
+        "Preparando ambiente personalizado",
+        "Aplicando aprendizado de máquina",
+        "Finalizando análise de compatibilidade"
+      ],
+      "networkMapping": "Mapeamento de Perfil",
+      "dataProcessing": "Processamento de Dados",
+      "securityLevel": "Nível de Segurança",
+      "profileAnalysis": "Análise de Perfil",
+      "profileScore": "Pontuação do Perfil",
+      "scoreUnit": "pontos",
+      "recognition": "Reconhecimento",
+      "preliminaryResults": "Resultados Preliminares",
+      "ghostChainCompatibility": "Compatibilidade com Ghost Chain™",
+      "anomalyDetection": "Detecção de Anomalias",
+      "processingConclusion": "Conclusão do Processamento",
+      "securityFooter": "Análise executada com processamento neural e criptografia de ponta a ponta",
+      "redirectMessage": "Análise concluída. Redirecionando para os resultados..."
+    },
+    "profileApproval": {
+      "title": "Aprovamos seu perfil para mineração!",
+      "subtitle": "Parabéns! Seu perfil foi aprovado.",
+      "description": "Criamos com sucesso o seu ambiente de mineração com base no seu perfil de investidor!",
+      "technicalAnalysis": "Análise Técnica Concluída:",
+      "techSpecs": "Especificações técnicas:",
+      "preparingEnvironment": "Preparando Ambiente Ghost Chain™",
+      "waiting": "Aguarde...",
+      "redirecting": "Redirecionando para o próximo passo em",
+      "seconds": "segundos",
+      "stats": {
+        "techInterest": "Interesse por Tecnologia",
+        "cryptoLevel": "Nível Crypto",
+        "riskOpenness": "Abertura ao Risco",
+        "miningPotential": "Potencial de Mineração"
+      },
+      "techSpecs": {
+        "ghostCore": "Ghost Core v2.1",
+        "security": "Segurança AES-256",
+        "wallets": "1M+ Wallets"
+      },
+      "specs": {
+        "scan": "Scan Blockchain"
+      }
+    },
+    "miningIntroduction": {
+      "title": "Mineração Ghost Chain™",
+      "subtitle": "Teste grátis nossa tecnologia de mineração exclusiva",
+      "instructionsTitle": "Instruções:",
+      "description1": "Nossa tecnologia Ghost Chain™ permite minerar criptomoedas sem hardware especializado, utilizando um algoritmo exclusivo que procura por carteiras abandonadas na blockchain.",
+      "description2": "Clique no botão abaixo para iniciar a mineração e descobrir o potencial desta tecnologia.",
+      "algorithmReady": "Algoritmo de busca preparado",
+      "secureConnection": "Conexão segura estabelecida",
+      "encryptionActive": "Criptografia de dados ativada",
+      "startMining": "Iniciar Mineração Ghost Chain™",
+      "startTest": "Comece o seu teste de mineração"
+    },
+    "miningPrepPopup": {
+      "environmentReady": "Ambiente Pronto!",
+      "preparingEnvironment": "Preparando Ambiente de Mineração",
+      "sessionReady": "Sua sessão de mineração Ghost Chain™ está pronta para começar",
+      "finalizingSettings": "Finalizando configurações de rede...",
+      "startingMining": "Iniciando mineração em",
+      "seconds": "segundos...",
+      "nodeSynchronization": "Sincronização de nós:",
+      "connectionStability": "Estabilidade da conexão:",
+      "securityStatus": "Status de segurança:",
+      "footerMessage": "Ghost Wallet™ está preparando um ambiente de mineração altamente especializado para sua sessão.",
+      "statusIcons": {
+        "server": "Servidor",
+        "network": "Rede",
+        "security": "Segurança",
+        "p2p": "P2P",
+        "data": "Dados",
+        "access": "Acesso",
+        "scripts": "Scripts",
+        "hardware": "Hardware",
+        "cloud": "Cloud"
+      },
+      "step1": "Alocando servidores dedicados Ghost Chain™...",
+      "step2": "Estabelecendo conexão com nós blockchain...",
+      "step3": "Configurando protocolos de segurança P2P...",
+      "step4": "Sincronizando blocos da rede Solana...",
+      "step5": "Carregando algoritmos de detecção avançada...",
+      "step6": "Estabelecendo canal criptografado para mineração...",
+      "step7": "Compilando scripts de detecção de carteiras...",
+      "step8": "Otimizando hardware para processamento paralelo...",
+      "step9": "Integrando ambiente à rede privada Ghost..."
+    }
+  }
+}
